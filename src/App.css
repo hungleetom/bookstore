@@ -1,0 +1,26 @@
+/* App.css */
+.app-container {
+    background-color: #f4f4f4;
+    color: #ff606e;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .app-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .app-container button {
+    background-color: #2aa6df; /* Secondary color */
+    color: rgb(141, 255, 75);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .app-container button:hover {
+    background-color: #1182c5; /* Primary color */
+  }

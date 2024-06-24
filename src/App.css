@@ -1,26 +1,116 @@
 /* App.css */
 .app-container {
-    background-color: #f4f4f4;
-    color: #ff606e;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .app-container a:hover {
-    text-decoration: underline;
-  }
-  
-  .app-container button {
-    background-color: #2aa6df; /* Secondary color */
-    color: rgb(141, 255, 75);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .app-container button:hover {
-    background-color: #1182c5; /* Primary color */
-  }
+  background-color: #f4f4f4;
+  color: #ff606e;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-container a:hover {
+  text-decoration: underline;
+}
+
+.app-container button {
+  background-color: #2aa6df;
+  color: rgb(141, 255, 75);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.app-container button:hover {
+  background-color: #1182c5;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: white;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2000;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar-content .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-content ul li {
+  margin: 15px 0;
+}
+
+.sidebar-content ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar-content ul li a:hover {
+  color: #2aa6df;
+}
+
+.sidebar-toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.scroll-button {
+  background-color: #2aa6df;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: #1182c5;
+}

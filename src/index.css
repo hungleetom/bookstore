@@ -20,7 +20,6 @@
   animation: spin 40s linear infinite;
 }
 
-/* smooth scroll*/
 html {
   scroll-behavior: smooth;
 }

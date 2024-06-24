@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto", "Arial", "sans-serif"], // Changed font family
+        sans: ["Roboto", "Arial", "sans-serif"], // Changed font family 하지만 한국어라 안됨
       },
       colors: {
         primary: "#6D28D9", // Purple
@@ -15,7 +15,7 @@ export default {
         light: "#F4F4F4", // Light gray
       },
       container: {
-        center: true, // Centering disabled
+        center: true, 
         padding: {
           DEFAULT: "1.5rem", // Default padding increased
           sm: "4rem", // Small screen padding increased

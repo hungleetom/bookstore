@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/website/logo.png";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaBars, FaCaretDown, FaCartPlus } from "react-icons/fa"; // Updated import
 import DarkMode from "./DarkMode";
-import { FaCaretDown } from "react-icons/fa";
+import Sidebar from "../Sidebar/Sidebar";
 
 const Menu = [
   {
@@ -33,9 +33,15 @@ const DropdownLinks = [
 ];
 
 const Navbar = ({ handleOrderPopup }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <>
-      <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200">
+      <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 navbar">
         <div className="container py-3 sm:py-0">
           <div className="flex justify-between items-center">
             <div>
@@ -45,6 +51,12 @@ const Navbar = ({ handleOrderPopup }) => {
               </a>
             </div>
             <div className="flex justify-between items-center gap-4">
+              <button
+                onClick={toggleSidebar}
+                className="sm:hidden text-2xl"
+              >
+                <FaBars />
+              </button>
               <div>
                 <DarkMode />
               </div>
@@ -59,7 +71,7 @@ const Navbar = ({ handleOrderPopup }) => {
                     </a>
                   </li>
                 ))}
-                {/* Simple Dropdown and Links */}
+                { }
                 <li className="group relative cursor-pointer">
                   <a
                     href="/#home"
@@ -91,12 +103,19 @@ const Navbar = ({ handleOrderPopup }) => {
                 className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3"
               >
                 주문
-                <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
+                <FaCartPlus className="text-xl text-white drop-shadow-sm cursor-pointer" /> {/* Updated icon */}
+              </button>
+              <button
+                onClick={toggleSidebar}
+                className="text-2xl"
+              >
+                <FaBars />
               </button>
             </div>
           </div>
         </div>
       </div>
+      <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
     </>
   );
 };
